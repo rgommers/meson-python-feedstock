@@ -23,7 +23,7 @@ requirements:
     - packaging >=19.0
     - pyproject-metadata >=0.7.1
     - pip
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - tomli >=1.0.0
   run:
     - meson >=0.63.3
@@ -51,7 +51,7 @@ tests:
         - if: linux
           then: patchelf
         - pip
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
         - pytest
         - pytest-mock
         - wheel
@@ -71,3 +71,4 @@ extra:
   recipe-maintainers:
     - awvwgk
     - rgommers
+
